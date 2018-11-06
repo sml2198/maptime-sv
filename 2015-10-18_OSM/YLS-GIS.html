@@ -10,59 +10,77 @@
   
 <body>
 
-<div>Welcome to <em>makin' maps with TechSoc and VLP</em>! Go to <a href='http://bit.ly/2fZZW0J'>http://bit.ly/2fZZW0J</a> to follow along. <a href='http://www.sarahmakesmaps.com'></div>
+<div>
+  welcome to <em>makin' maps with TechSoc and VLP</em>! go to <a href='http://bit.ly/2fZZW0J'>http://bit.ly/2fZZW0J</a> to follow along. <a href='http://www.sarahmakesmaps.com'>
+</div>
 
-<div><a href='http://www.sarahmakesmaps.com'>Links</a> are in blue boxes, <em>green</em> is just emphasis. Use &harr; to navigate.</div>
+<div>
+  <a href='http://www.sarahmakesmaps.com'>links</a> are in blue boxes, <em>green</em> is just emphasis. use &harr; to navigate.
+</div>
   
-<div>What's a map?</div>
-<div>How do I make one?</div>
-<div>Where do I get data?</div>
-<div>How do I troubleshoot?</div>
+<div><em>things we're going to learn today:</em><br>
+  what's a map?<br>
+  how do I make one?<br>
+  where do I get data?<br>
+  how do I troubleshoot?
+</div>
   
-<div><em>Phase I:</em> Need-to-know basics</div>
-<div><em>Phase I: Need-to-know basics</em><br>
-  &#9856; GIS <br>  
-  &#9857; layers <br>
-  &#9858; data types: vector and raster <br> 
-  &#9859; object types: points, lines, polygons <br>   
-  &#9860; projection systems </div>
+<div>how we're going to do it:<br>
+  <em>phase I:</em> need-to-know basics<br>
+  <em>phase II:</em> how-to<br>
+  <em>phase III:</em> make it good (make it not suck) 
+</div>
 
-<div>&#9856;<em>GIS:</em> Geographic Information Systems</div>
-  <div>
-    &#9675; <em>ESRI ArcGIS</em>: beloved, powerful & proprietary <br>
-    &#9675; <em>QGIS</em>: open source & scrappy <br>
+<div><em>phase I: need-to-know basics</em><br>
+  &#9856; GIS<br>  
+  &#9857; layers<br>
+  &#9858; data types: vector and raster<br> 
+  &#9859; object types: points, lines, polygons<br>   
+  &#9860; projection systems 
+</div>
+
+<div><em>GIS:</em> geographic information systems<br>
+    &#9675; <em>ESRI ArcGIS</em>: beloved, powerful &amp; proprietary<br>
+    &#9675; <em>QGIS</em>: open source &amp; scrappy<br>
     &#9675; <em>misc other</em>: special for web maps, design, etc.
-  </div>
+</div>
   
-<div>&#9857;<em>layers</em>:</div>
+<div><em>layers:</em><br>
+    &#9675; GIS maps are composed of map layers, drawn in a particular order<br>
+    &#9675; each layer is a dataset that represents a discrete entity (e.g. streets, trees, parks)
+    <notes>a map layer defines how a GIS dataset is symbolized and labeled (that is, portrayed) in your map views</notes>
+</div>
   
-<div>&#9858;<em>data types:</em> vector and raster</div>
-  <div>
-    &#9675; a data type is a way of representing data <br>
-    &#9675; all GIS data types consist of latitude and longitude (an x and y coordinate) <br>
-    &#9675; the difference is what data is stored in each point/pixel <br>
-  </div>
-  <div>
-    &#9675; <em>vector data:</em> <br>
-      &#9675; is split into three types: polygon, line and point data.<br>
-      &#9675; can store many attributes for each point/pixel.<br>
-    &#9675; <em>raster data:</em> <br>
-      &#9675; is also called grid data, and it represents surfaces.<br>
-      &#9675; only stores one attribute for each point/pixel, e.g. elevation or color.
-  </div>
-  <div>
-    &#9675; at the most basic level, think of <em>vector data</em> as a data table, and think of <em>raster data</em> as an image. <br>
-    &#9675; today, we are only dealing with vector data. <br>
-    &#9675; <a href = "https://gisgeography.com/spatial-data-types-vector-raster/">more info.</a>
-  </div>
+<div><em>data types:</em> vector and raster<br>
+  &#9675; a data type is a way of representing data<br>
+  &#9675; all GIS data types consist of latitude and longitude (an x and y coordinate)<br>
+  &#9675; the difference is what data is stored in each point/pixel
+</div>
+
+<div>
+  <em>vector data:</em><br>
+    &#9675; is split into three types: polygon, line and point data.<br>
+    &#9675; can store many attributes for each point/pixel.<br>
+  <em>raster data:</em><br>
+    &#9675; is also called grid data, and it represents surfaces.<br>
+    &#9675; only stores one attribute for each point/pixel, e.g. elevation or color.
+</div>
+
+<div>
+  &#9675; at the most basic level, think of <em>vector data</em> as a data table, and think of <em>raster data</em> as an image.<br>
+  &#9675; today, we are only dealing with vector data.<br>
+  &#9675; <a href = "https://gisgeography.com/spatial-data-types-vector-raster/">more info.</a>
+</div>
   
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acad88251be12178005f/1541450932171/raster-v-vector?format=1000w'style="margin:auto">
 </div>
 
+<div data-bodyclass='light-text' data-background-image='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acf7562fa792b007f9da/1541451022187/raster_1.png?format=2500w'>raster</div>
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acf7562fa792b007f9da/1541451022187/raster_1.png?format=2500w'style="margin:auto">raster
 </div>
+
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541451013725/raster-2.gif?format=1500w'style="margin:auto">raster
 </div>
@@ -70,56 +88,84 @@
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad138a922d3d1209ea4f/1541451039241/vector_data_1.png?format=2500w'style="margin:auto">vector
 </div>
+
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad201ae6cfb40a043de9/1541451049006/vector_data_2.png?format=2500w'style="margin:auto">vector
 </div>
+
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad454d7a9c42bcfe278b/1541451086598/vector_data_3.png?format=2500w'style="margin:auto">vector
 </div>
+
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad4e4d7a9c42bcfe2850/1541451092300/vector_data_4.png?format=1500w'style="margin:auto">vector
 </div>
           
-<div>&#9859;<em>object types for vector data:</em> points, lines, polygons</div>
+<div><em>object types for vector data:</em><br>
+  &#9675; <em>points:</em> a single point with a single x,y coordinate<br>
+  &#9675; <em>lines:</em> two points or more connected with lines<br>
+  &#9675; <em>polygons:</em> a bounded area of points connected by lines 
+</div>
+
 <div> 
-<img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0a305aa4a995b1fd0ebc3/1541448467710/point_line_polygon_1?format=1500w'style="margin:auto">
-  <notes>Thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php</notes>
-  </div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0a305aa4a995b1fd0ebc3/1541448467710/point_line_polygon_1?format=1500w'style="margin:auto">
+  <notes>thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php</notes>
+</div>
+
 <div>
-<img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0a31bf950b7b43aa8acc9/1541448478093/point_line_polygon_2?format=1500w'style="margin:auto"> 
-  <notes>Thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php</notes>
-  </div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0a31bf950b7b43aa8acc9/1541448478093/point_line_polygon_2?format=1500w'style="margin:auto"> 
+  <notes>thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php</notes>
+</div>
 
-<div>&#9860;<em>projection systems</em></div>
+<div><em>projection systems</em>
+</div>
   
-<div><em>Phase II:</em> How-to</div>
-<div><em>Phase II: How-to</em><br>
-  &#9856; download a dataset <br>
-  &#9857; import and display a dataset in GIS <br>
-  &#9858; symbolize a dataset <br>
-  &#9859; advanced: merge </div>
+<div><em>phase II: how-to</em><br>
+  &#9856; download a dataset<br>
+  &#9857; import and display a dataset in GIS<br>
+  &#9858; symbolize a dataset<br>
+  &#9859; advanced: merge 
+</div>
   
-<div><em>Phase III:</em> Make it good (make it not suck)</div>
-<div><em>Phase III: Make it good (make it not suck)</em><br>
-  &#9856; what's a good map? <br>
-  &#9857; what's a bad map? <br>
-  &#9858; common pitfalls </div>
+<div>download a dataset
+</div>
+
+<div>import and display a dataset in GIS
+</div>
+
+<div>symbolize a dataset
+</div>
+
+<div>advanced: merge 
+</div>
+
+<div><em>phase III: make it good (make it not suck)</em><br>
+  &#9856; what's a good map?<br>
+  &#9857; what's a bad map?<br>
+  &#9858; common pitfalls 
+</div>
   
-<div>Examples of good maps.</div>
-<div>Examples of bad maps.</div>
-<div>Common pitfalls.</div>
-  
-<div>Need more info? <em>Help</em> getting started?<a href='http://learnosm.org/en/'>http://learnosm.org/en/</a>
-<a href='http://mapgive.state.gov/'>http://mapgive.state.gov/</a></div>
+<div>examples of good maps
+</div>
 
-<div>Want more <em>ideas</em> for ways to use OSM? Things to map? Check out <a href='http://maproulette.org/'>MapRoulette</a> &amp; <a href='http://fieldpapers.org/'>Field Papers</a> &amp; <a href='http://www.itoworld.com/'>ITO World</a></div>
+<div>examples of bad maps
+</div>
 
-<div>Want to get data out of <em>OSM</em>? Check out <a href='https://mapzen.com/data/metro-extracts'>Mapzen Metro Extracts</a> &amp; <a href='http://download.geofabrik.de/'>Geofabrik</a></div>
+<div>common pitfalls
+</div>
 
-<div>Let's chat: <a href='https://twitter.com/sarahmakesmaps'>@sarahmakesmaps</a><a href='http://www.sarahmakesmaps.com'>sarahmakesmaps.com</a>
-<notes>Psst, my personal email is sarah.michael.levine@gmail.com</notes></div>
+<div>
+  want to get data out of <em>OSM</em>? check out <a href='https://mapzen.com/data/metro-extracts'>Mapzen Metro Extracts</a> &amp; <a href='http://download.geofabrik.de/'>Geofabrik</a>
+</div>
 
-<div>Made with <em>BIG</em> presentation software for busy busy hackers. You can comment and edit on github: <a href='https://github.com/tmcw/big'>https://github.com/tmcw/big</a></div>
+<div>
+  let's chat: <a href='https://twitter.com/sarahmakesmaps'>@sarahmakesmaps</a>
+  <notes>psst, my personal email is sarah.michael.levine@gmail.com</notes>
+</div>
+
+<div>
+  made with <em>BIG</em> presentation software for busy busy hackers. you can comment and edit on github: <a href='https://github.com/tmcw/big'>https://github.com/tmcw/big</a>
+</div>
 
 </body>
 </html>
