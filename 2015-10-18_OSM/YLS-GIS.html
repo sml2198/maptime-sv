@@ -10,11 +10,11 @@
 <script src='big.js'></script></head><body>
 
 <div>
-  welcome to <em>makin' maps with TechSoc and VLP</em>! go to <a href='https://bit.ly/2DhNOWu'>https://bit.ly/2DhNOWu</a> to follow along.
+  welcome to <em>makin' maps with TechSoc and VLP</em>! go to <a href='https://bit.ly/2DhNOWu' target="_blank">https://bit.ly/2DhNOWu</a> to follow along.
 </div>
 
 <div>
-  <a href='http://www.sarahmakesmaps.com' target="_blank">links</a> are in blue boxes, <em>green</em> is just emphasis. use &harr; to navigate. you can edit + comment on <a href='https://github.com/sml2198/maptime-sv/blob/gh-pages/2015-10-18_OSM/YLS-GIS.html' target="_blank">github</a> 
+  <a href='http://www.sarahmakesmaps.com' target="_blank">links</a> are in blue boxes, <em>green</em> is just emphasis. use &harr; to navigate. you can edit + comment on <a href='https://github.com/sml2198/maptime-sv/blob/gh-pages/2015-10-18_OSM/YLS-GIS.html' target="_blank">github</a>. 
 </div>
   
 <div>
@@ -95,7 +95,7 @@
 <div>
   &#x2022; at the most basic level, think of <em>vector data</em> as a data table, and think of <em>raster data</em> as an image<br>
   &#x2022; today, we are only dealing with vector data<br>
-  &#x2022; <a href = "https://gisgeography.com/spatial-data-types-vector-raster/" target="_blank">more info.</a>
+  &#x2022; <a href = "https://gisgeography.com/spatial-data-types-vector-raster/" target="_blank">more info</a>.
 </div>
 
 <div>
@@ -240,7 +240,7 @@
   <em>phase II: how-to</em><br>
   &#9856; navigate ArcMap + make a document<br>
   &#9857; get some data<br>
-  &#9858; import and display a dataset in GIS<br>
+  &#9858; import and display a dataset<br>
   &#9859; symbolize a dataset<br>
   &#9860; advanced: merge 
 </div>
@@ -259,7 +259,8 @@
     we will be using ArcMap today, which is the 2D mapping software that is part of the ESRI ArcGIS suite (ESRI also makes 3d rendering software, called ArcScene and other fun things) 
     first, go to programs -> ArcGIS -> ArcMap (should be version 10.6.1 but not a huge deal if not)
     select "blank map" (you may need to navigate through "New Maps" -> "My Templates" -> "Blank Map" in the left-hand table of contents)
-    save your file - ArcMap files are saved as an .mxd (Map Exchange Document) which are very portable 
+    save your file - ArcMap files are saved as an .mxd (Map Exchange Document) which are very portable
+    you can double-click on an .mxd file once it is saved to open it and ArcMap will launch 
   </notes>
 </div>
 
@@ -269,9 +270,9 @@
 
 <div>
   &#x2022; the layer panel/<em>TOC</em> is your friend<br>
-  &#x2022; note the <em>zoom</em>, <em>pan</em>, and <em>select</em> buttons
+  &#x2022; note the <em>zoom</em>, <em>pan</em>, <em>full-extent</em>, and <em>select</em> buttons<br>
+  &#x2022; toggle between <em>data view</em> and <em>layout view</em> ("View" in the top bar)
   <notes>
-    you can double-click on an .mxd file once it is saved to open it and ArcMap will launch
     data view is for working in, and layout view is for getting things print-ready
     the layer panel, or TOC, displays your layers, which you can turn on and off, drag to reorder, and right-click on to view their properties and attributes   
 
@@ -305,7 +306,7 @@
 </div>
 
 <div>
-  &#9857; <em>get some data</em>
+  &#9857; <em>get some</em> data
 </div>
 
 <div>
@@ -313,33 +314,56 @@
   &#x2022; you may also hear .kml, .kmz, .geojson, etc.<br>
   &#x2022; a .shp usually comes in a <em>.zip</em> file<br>
   &#x2022; <em>good news:</em> shapefiles are abundant!
+</div>
+
+<div>
+  &#x2022; <a href='https://www.census.gov/geo/maps-data/data/cbf/cbf_counties.html'>click me</a><br>
+  &#x2022; download "cb_2017_us_county_500k.zip" &amp; save with your map, but first, let's talk about <em>file paths</em><br>
+  &#x2022; make sure to <em>unzip</em> your file (right click &#x2192; "Extract All")
   <notes>
-    BITLY
+    NB: to get this dataset, I literally just googled "usa counties gis data download"
     *** note that we will come back to where to find data you can use for your own map-making needs
-    where to save - file paths
-    make its it's unzipped
     how to name files
-    inspect it - whats in a shapefile?
   </notes>
 </div>
 
 <div>
-  <em>get some data!</em><br>
-  &#x2022; <a href=''>click me</a><br>
-  &#x2022; download &amp; save, but first, let's talk about <em>file paths</em>
+  quick: what's in a <em>shapefile</em>?
   <notes>
-    ADD LINK FOR DATA DOWNLOAD
+    thanks, http://jonathansoma.com/tutorials/mapping/parts-of-a-shapefile/
   </notes>
 </div>
 
 <div>
-  &#9858; <em>import</em> &amp; <em>display</em> a dataset</em>
+  <em>.shp</em> is the geometry, i.e. the points, lines or polygons. basically, it's the shapes!
+</div>
+<div>
+  <em>.prj</em> is the projection system for your shapes
+</div>
+<div>
+  <em>.dbf</em> is the data associated with each shape (e.g. whatever attributes you have stored)
+</div>
+<div>
+  <em>.shx</em> is an index file for the geometry (tl;dr: this speeds things up)
+</div>
+<div>
+  <em>.shp.xml</em> is “geospatial metadata in XML format”. . . yeah, <em>don't worry</em> about that . . .
 </div>
 
 <div>
-   &#x2022; find the yellow <em>add data</em> button &#x2192; 
+   &#x2022; find the yellow <em>Add Data</em> button &#x2192; 
      <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be72d7c4d7a9c5e1ee5e54b/1541877127073/add-data-button.png?format=100w' style="width:55px;"><br>
-   &#x2022; navigate to your shapefile and add it<br>
+   &#x2022; find the yellow <em>Connect to Folder</em> button &#x2192; 
+     <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be73ac903ce64619f7a1b38/1541880526430/file-path-button.png?format=100w' style="width:55px;"><br>
+   &#x2022; navigate to your shapefile and select <em>"Add"</em><br>
+   &#x2022; zoom in on the continental states &#x2192; 
+     <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be7403870a6ad6a48f57f5d/1541881913311/zoom-buttons.png?format=100w' style="width:55px;">
+  <notes>
+    you can see the data type previewed! you're so smart, ArcMap
+  </notes>
+</div>
+
+<div>  
    &#x2022; <em>inspect</em> your layer in the TOC<br>
    &#x2022; note that if you move your .shp file on your computer, or if you use a portable drive, you'll need to <em>"reconnect"</em> your data source everytime you open your .mxd
   <notes>
@@ -360,18 +384,23 @@
 </div>
 
 <div>
-  right-click and select view attributes<br>
-  practice selecting elements from the table<br>
-  practice selecting elements from the layer 
-</div>
-
-<div>
-  fortunately, we're not done with <em>projection systems</em> yet! in ArcMap, datasets can (/sometimes must) have their own defined projection systems, while the data frame can have a <em>completely different</em> one!
+  fortunately, we're not done with <em>projection systems</em>! in ArcMap, datasets can have their own defined projection systems, while the data frame can have a <em>completely different</em> one!
   <notes>
     this is actually a really good thing - it means you can add layers with different systems to the map at once (by using "on the fly" projecting in ArcMap, but this does make your layers render more slowly)
     to change the system of a layer:
   </notes>
 </div>
+
+<div>
+  to change the projection system: right-click on <em>Layers</em> &#x2192; select <em>Properties</em> &#x2192; select <em>Coordinate System</em> &#x2192; search for <a href='https://en.wikipedia.org/wiki/Albers_projection' target="_blank">USA Contiguous Albers Equal Area Conic</a> &#x2192; select <em>Apply</em>
+</div>
+
+<div>
+  right-click on your layer name and select Properties<br>
+  practice selecting elements from the table<br>
+  practice selecting elements from the layer 
+</div>
+
 
 <div>
   1. right-click on the Layers Item at the top of the Table of Contents and select Properties<br>
