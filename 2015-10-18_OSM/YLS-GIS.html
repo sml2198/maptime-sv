@@ -9,137 +9,291 @@
     .new-shiny { background: #aaaaaa; }
     .light-text { color: #fff; }
   </style> 
-<script src='big.js'> </script>
+<script src='big.js'></script>
 </head>
-
-<body class='light'>
+<body>
 
 <div>
-  welcome to <em>makin' maps with TechSoc and VLP</em>! go to <a href='http://bit.ly/2fZZW0J'>http://bit.ly/2fZZW0J</a> to follow along. <a href='http://www.sarahmakesmaps.com'>
+  welcome to <em>makin' maps with TechSoc and VLP</em>! go to <a href='http://bit.ly/2fZZW0J'>http://bit.ly/2fZZW0J</a> to follow along.
 </div>
 
 <div>
   <a href='http://www.sarahmakesmaps.com'>links</a> are in blue boxes, <em>green</em> is just emphasis. use &harr; to navigate.
 </div>
   
-<div><em>things we're going to learn today:</em><br>
+<div>
+  <em>things we're going to learn today:</em><br>
   what's a map?<br>
   how do I make one?<br>
   where do I get data?<br>
   how do I troubleshoot?
 </div>
   
-<div>how we're going to do it:<br>
+<div>
+  how we're going to do it:<br>
   <em>phase I:</em> need-to-know basics<br>
   <em>phase II:</em> how-to<br>
   <em>phase III:</em> make it good (make it not suck) 
 </div>
 
-<div><em>phase I: need-to-know basics</em><br>
+<div>
+  but first, <em>what's a map?</em>
+</div>
+
+<div>
+  I like maps, <em>because they lie.</em><br>
+  Because they give no access to the vicious truth.<br>
+  Because great-heartedly, good-naturedly<br>
+  they spread before me a world<br>
+  not of this world.<br>
+  - <a href ="https://www.newyorker.com/magazine/2014/04/14/map">Wis&#322;awa Szymborska</a>
+</div>
+
+<div>
+  <em>phase I: need-to-know basics</em><br>
   &#9856; GIS<br>  
-  &#9857; layers<br>
+  &#9857; data layers<br>
   &#9858; data types: vector and raster<br> 
   &#9859; object types: points, lines, polygons<br>   
   &#9860; projection systems 
 </div>
 
-<div><em>GIS:</em> geographic information systems<br>
+<div>
+  &#9856; <em>GIS:</em> geographic information systems<br>
   &#9675; <em>ESRI ArcGIS</em>: beloved, powerful &amp; proprietary<br>
   &#9675; <em>QGIS</em>: open source &amp; scrappy<br>
   &#9675; <em>misc other</em>: special for web maps, design, etc.
 </div>
   
-<div><em>layers:</em><br>
+<div>
+  &#9857; <em>data layers:</em><br>
   &#9675; GIS maps are composed of map layers, drawn in a particular order<br>
-  &#9675; each layer is a dataset that represents a discrete entity (e.g. streets, trees, parks)
-  <notes>a map layer defines how a GIS dataset is symbolized and labeled (that is, portrayed) in your map views</notes>
+  &#9675; each layer is a <em>dataset</em> that represents a <em>discrete entity</em> (e.g. streets, trees, parks)
+  <notes>
+    a map layer defines how a GIS dataset is symbolized and labeled (that is, portrayed) in your map views
+  </notes>
+  <notes>
+    NOTE: WE NEED A VISUAL HERE
+  </notes>
 </div>
   
-<div><em>data types:</em> vector and raster<br>
+<div>
+  &#9858; <em>data types:</em> vector and raster<br>
   &#9675; a data type is a way of representing data<br>
-  &#9675; all GIS data types consist of latitude and longitude (an x and y coordinate)<br>
-  &#9675; the difference is what data is stored in each point/pixel
+  &#9675; all GIS data types consist of <em>latitude and longitude</em> (an x and y coordinate)<br>
+  &#9675; the difference is <em>what data is stored in each point/pixel</em>
 </div>
 
 <div>
   <em>vector data:</em><br>
-    &#9675; is split into three types: polygon, line and point data.<br>
-    &#9675; can store many attributes for each point/pixel.<br>
+    &#9675; is split into three types: polygon, line and point data<br>
+    &#9675; can store <em>many attributes per point</em> or pixel<br>
   <em>raster data:</em><br>
-    &#9675; is also called grid data, and it represents surfaces.<br>
-    &#9675; only stores one attribute for each point/pixel, e.g. elevation or color.
+    &#9675; is also called grid data, and it represents surfaces<br>
+    &#9675; only stores <em>one attribute per point</em> or pixel, e.g. elevation or color
+  <notes>
+    ADD LINKS TO WORDS RASTER AND VECTOR TO MAKE THEM STAND OUT 
+  </notes>
 </div>
 
 <div>
-  &#9675; at the most basic level, think of <em>vector data</em> as a data table, and think of <em>raster data</em> as an image.<br>
-  &#9675; today, we are only dealing with vector data.<br>
+  &#9675; at the most basic level, think of <em>vector data</em> as a data table, and think of <em>raster data</em> as an image<br>
+  &#9675; today, we are only dealing with vector data<br>
   &#9675; <a href = "https://gisgeography.com/spatial-data-types-vector-raster/">more info.</a>
 </div>
+
+
+<div>
+  <center>
+    <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acad88251be12178005f/1541450932171/raster-v-vector?format=1000w'style="margin:auto">
+  </center>
+</div>
   
 <div>
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acad88251be12178005f/1541450932171/raster-v-vector?format=1000w'style="height:100%;margin:auto">
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acf7562fa792b007f9da/1541451022187/raster_1.png?format=2500w'style="margin:auto" />raster
 </div>
-  
 <div>
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acf7562fa792b007f9da/1541451022187/raster_1.png?format=2500w'>raster
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541451013725/raster-2.gif?format=1500w'style="margin:auto" />raster
 </div>
 
-<div> 
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541451013725/raster-2.gif?format=1500w'>raster
+
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad138a922d3d1209ea4f/1541451039241/vector_data_1.png?format=2500w'style="margin:auto" /><em>vector</em>
 </div>
-  
-<div> 
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad138a922d3d1209ea4f/1541451039241/vector_data_1.png?format=2500w'style="height:100%;width:100%;margin:auto">vector
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad201ae6cfb40a043de9/1541451049006/vector_data_2.png?format=2500w'style="margin:auto" />vector
+</div>
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be19dbc21c67c61c41ffa9b/1541512637860/?format=1500w'style="margin:auto">vector
+</div>
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be19dab70a6adf220e5f1a3/1541512645786/vector_data_2.png?format=1500w'style="margin:auto"><em>vector</em>
+</div>
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad454d7a9c42bcfe278b/1541451086598/vector_data_3.png?format=1500w'style="margin:auto"><em>vector</em>
 </div>
 
-<div> 
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad201ae6cfb40a043de9/1541451049006/vector_data_2.png?format=2500w'style="height:100%;width:100%;margin:auto">vector
-</div>
-
-<div> 
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad454d7a9c42bcfe278b/1541451086598/vector_data_3.png?format=2500w'style="height:100%;width:100%;margin:auto">vector
-</div>
-
-<div> 
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad4e4d7a9c42bcfe2850/1541451092300/vector_data_4.png?format=1500w'style="height:100%;width:100%;margin:auto">vector
-</div>
           
-<div><em>object types for vector data:</em><br>
-  &#9675; <em>points:</em> a single point with a single x,y coordinate<br>
+<div>
+  &#9859; <em>object types for vector data:</em><br>
+  &#9675; <em>points:</em> a single pixel with a single x,y coordinate<br>
   &#9675; <em>lines:</em> two points or more connected with lines<br>
   &#9675; <em>polygons:</em> a bounded area of points connected by lines 
 </div>
 
 <div> 
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0a305aa4a995b1fd0ebc3/1541448467710/point_line_polygon_1?format=1500w'style="margin:auto">
-  <notes>thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php</notes>
+  <notes>
+    thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php
+  </notes>
 </div>
 
 <div>
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0a31bf950b7b43aa8acc9/1541448478093/point_line_polygon_2?format=1500w'style="margin:auto"> 
-  <notes>thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php</notes>
+  <notes>
+    thanks! http://www.restore.ac.uk/geo-refer/52611cwors00y00000000.php
+  </notes>
 </div>
 
-<div><em>projection systems</em>
+<div>
+  &#9860; <em>projection systems</em><br>
+  &#9675; a map is flat (2d). the world is not (?d).<br>
+  &#9675; displaying a <em>3d object on a 2d surface</em> requires some distortion<br>
+  &#9675; there are <a href='http://www.radicalcartography.net/index.html?projectionref'>many different ways</a> of doing that <em>distortion</em>, and each has different <a href='http://geokov.com/education/map-projection.aspx'>virtues and vices</a>
+  <notes>
+    http://www.radicalcartography.net/index.html?projectionref
+    http://www.quadibloc.com/maps/mapint.htm
+    http://geokov.com/education/map-projection.aspx
+  </notes>
+  <notes>
+    Projections are also classified in terms of their properties. Specifically, on the basis of two very important properties: whether they are conformal, or equal-area, or neither. A conformal projection maintains the shape of small regions, so angles at any point are correct, although sizes will change. An equal-area projection, on the other hand, maintains size at the expense of shape. Maintaining both size and shape, of course, requires a globe.
+  </notes>
 </div>
   
-<div><em>phase II: how-to</em><br>
-  &#9856; download a dataset<br>
-  &#9857; import and display a dataset in GIS<br>
-  &#9858; symbolize a dataset<br>
-  &#9859; advanced: merge 
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be19de540ec9ab4ef5299b5/1541512686976/?format=1500w'style="margin:auto">
+</div>
+
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be19df021c67c61c41ffcc5/1541512689938/?format=1500w'style="margin:auto">
+</div>
+
+
+<div>
+  <em>phase II: how-to</em><br>
+  &#9856; navigate ArcMap + make a document<br>
+  &#9857; get some data<br>
+  &#9858; import and display a dataset in GIS<br>
+  &#9859; symbolize a dataset<br>
+  &#9860; advanced: merge 
+</div>
+
+<div>
+  &#9856; <em>navigate ArcMap</em> + make a document<br>
+  &#9675; a document in ArcMap is called an <em>.mxd</em> file<br>
+  &#9675; there are two "views" in ArcMap: data view and layout view<br>
+  &#9675; the layer panel/<em>TOC</em> is your friend<br>
+  &#9675; note the zoom, pan, and select buttons
+  <notes>
+    double-click on an .mxd file to open it, ArcMap will launch
+    data view is for working in, and layout view is for getting things print-ready
+    the layer panel, or TOC, displays your layers, which you can turn on and off, drag to reorder, and right-click on to view their properties and attributes   
+  </notes>
 </div>
   
-<div>download a dataset
+<div>
+  <em>get some data</em><br>
+  &#9675; a GIS layer is called a <em>shapefile</em> (<em>.shp</em>)<br>
+  &#9675; you may also hear .kml, .kmz, .geojson, etc.<br>
+  &#9675; a .shp usually comes in a <em>zip</em> file<br>
+  &#9675; <em>good news:</em> shapefiles are abundant!
+  <notes>
+    BITLY
+    *** note that we will come back to where to find data you can use for your own map-making needs
+    where to save - file paths
+    make its it's unzipped
+    how to name files
+    inspect it - whats in a shapefile?
+  </notes>
 </div>
 
-<div>import and display a dataset in GIS
+<div>
+  <em>get some data!</em><br>
+  &#9675; <a href=''>click me</a><br>
+  &#9675; download &amp; save, but let's talk about <em>file paths</em>
+  <notes>
+
+    ADD LINK FOR DATA DOWNLOAD
+
+  </notes>
 </div>
 
-<div>symbolize a dataset
+<div>
+  <em>import &amp; display a dataset</em><br>
+   &#9675; find the yellow <em>add data</em> button<br>
+   &#9675; navigate to your shapefile<br>
+   &#9675; <em>inspect</em> your layer in the TOC<br>
+   &#9675; note that if you move your .shp file on your computer, or if you use a portable drive, you'll need to <em>"reconnect"</em> your data source everytime you open your .mxd
+  <notes>
+    the yellow add data button
+    navigate to your folder
+    click add - you can do many at once
+    notice that you can see the data type - pt, line polygon
+    look at layer in the TOC - turn on and off, reorder
+    right-click and select vie attributes - the is the data table underlying your layer
+    practice selecting elements from the table, selecting from the layer 
+  </notes>
 </div>
 
-<div>advanced: merge 
+<div>
+  symbolize a dataset
+  <notes>
+    ## GET VISUALS OF (1) different types of maps e.g. choropleth and (2) different ways of visualizing the same dataset by different types 
+
+    right-click and select properties
+    basic symbology
+    symbolize by category/quantity
+    things to think about with symbolizing by value - normalizing, method of breaking up data, appropriate color scheme
+  </notes>
+</div>
+
+<div>
+  <em>other things you can do</em> (&amp; will want to):<br>
+  &#9675; add a <em>basemap</em> (e.g. <span style="color:#0266C8">g</span><span style="color:#F90101">o</span><span style="color:#F2B50F">o</span><span style="color:#0266C8">g</span><span style="color:#00933B">l</span><span style="color:#F90101">e</span>, stamen, bing imagery)<br>
+  &#9675; <em>edit</em> your data table<br>
+  &#9675; <em>edit</em> your shapes<br>
+  &#9675; perform <em>analyses</em> (e.g. calculate distance, do a clustering or kernel density analysis, etc.)<br>
+  &#9675; make your own data layers!
+  <notes>
+    right-click and select properties
+    basic symbology
+    symbolize by category/quantity
+    things to think about with symbolizing by value - normalizing, method of breaking up data, appropriate color scheme
+  </notes>
+</div>
+
+
+<div>
+  <em>export your map</em><br>
+  <notes>
+    now we need to switch into layout view
+    then we add a map
+    add a legend
+    add a scale bar
+    export  
+  </notes>
+</div>
+
+<div>
+  <em>advanced: merge</em><br>
+  &#9675; sometimes the information you want isn't in one dataset<br>
+  &#9675; imagine you have one .shp of U.S. states (shapes) and a separate dataset of map lovers per state (numbers)<br>
+  &#9675; a <em>merge</em> is a database operation to connect your datasets by a <em>common attribute</em> (e.g. state)
+  <notes>
+
+    ## GET A VISUAL OF A TABLE MERGE 
+
+  </notes>
 </div>
 
 <div><em>phase III: make it good (make it not suck)</em><br>
@@ -148,22 +302,39 @@
   &#9858; common pitfalls 
 </div>
   
-<div>examples of good maps
-</div>
-
-<div>examples of bad maps
-</div>
-
-<div>common pitfalls
+<div>
+  examples of good maps
 </div>
 
 <div>
-  want to get data out of <em>OSM</em>? check out <a href='https://mapzen.com/data/metro-extracts'>Mapzen Metro Extracts</a> &amp; <a href='http://download.geofabrik.de/'>Geofabrik</a>
+  examples of bad maps
+</div>
+
+<div>
+  common pitfalls
+</div>
+
+<div>
+  where to find your own data?
+</div>
+
+<div>
+  some mappy inspiration
+</div>
+
+<div>
+  <em>OpenStreetMap</em> is like geo Wikipedia - it's all <a href='http://opendatacommons.org/licenses/odbl/'>open data</a>
+</div>
+
+<div>
+  want to get open source data out of <em>OSM</em>? check out <a href='https://mapzen.com/data/metro-extracts'>Mapzen Metro Extracts</a> &amp; <a href='http://download.geofabrik.de/'>Geofabrik</a> &amp; then <a href='www.learnosm.org'>help add to OSM</a>
 </div>
 
 <div>
   let's chat: <a href='https://twitter.com/sarahmakesmaps'>@sarahmakesmaps</a>
-  <notes>psst, my personal email is sarah.michael.levine@gmail.com</notes>
+  <notes>
+    psst, my personal email is sarah.michael.levine@gmail.com
+  </notes>
 </div>
 
 <div>
