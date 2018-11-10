@@ -111,7 +111,7 @@
 </div>
 
 <div>
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541451013725/raster-2.gif?format=1500w' />
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541872867052/raster-2.gif?format=750w' />
   raster
 </div>
 
@@ -246,11 +246,14 @@
 </div>
 
 <div>
-  &#9856; navigate ArcMap + <em>make a document</em> (#1)<br>
-  &#x2022; create <em>folder</em> and give it a name with no spaces<br>
+  &#9856; navigate ArcMap + <em>make a document</em>
+</div>
+
+<div>
+  &#x2022; create a <em>folder</em> and give it a name with no spaces<br>
   &#x2022; go to programs &#x2794; ArcGIS &#x2794; <em>ArcMap</em> (v 10.6.1)<br>
   &#x2022; select <em>"blank map"</em><br>
-  &#x2022; save to your folder: a doc in ArcMap is called an <em>.mxd</em> file
+  &#x2022; save to your folder (a doc in ArcMap is called an <em>.mxd</em> file)
   <notes>
     make a folder on the desktop (or wherever) and give it a name (make sure there are no spaces in your folder name)
     we will be using ArcMap today, which is the 2D mapping software that is part of the ESRI ArcGIS suite (ESRI also makes 3d rendering software, called ArcScene and other fun things) 
@@ -265,9 +268,8 @@
 </div>
 
 <div>
-  &#9856; <em>navigate ArcMap</em> + make a document (#2)<br>
   &#x2022; the layer panel/<em>TOC</em> is your friend<br>
-  &#x2022; note the zoom, pan, and select buttons
+  &#x2022; note the <em>zoom</em>, <em>pan</em>, and <em>select</em> buttons
   <notes>
     you can double-click on an .mxd file once it is saved to open it and ArcMap will launch
     data view is for working in, and layout view is for getting things print-ready
@@ -303,10 +305,13 @@
 </div>
 
 <div>
-  <em>get some data</em><br>
+  &#9857; <em>get some data</em>
+</div>
+
+<div>
   &#x2022; a GIS layer is called a <em>shapefile</em> (<em>.shp</em>)<br>
   &#x2022; you may also hear .kml, .kmz, .geojson, etc.<br>
-  &#x2022; a .shp usually comes in a <em>zip</em> file<br>
+  &#x2022; a .shp usually comes in a <em>.zip</em> file<br>
   &#x2022; <em>good news:</em> shapefiles are abundant!
   <notes>
     BITLY
@@ -328,10 +333,13 @@
 </div>
 
 <div>
-  <em>import &amp; display a dataset</em><br>
-   &#x2022; find the yellow <em>add data</em> button
+  &#9858; <em>import</em> &amp; <em>display</em> a dataset</em>
+</div>
+
+<div>
+   &#x2022; find the yellow <em>add data</em> button &#x2192; 
      <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be72d7c4d7a9c5e1ee5e54b/1541877127073/add-data-button.png?format=100w' style="width:55px;"><br>
-   &#x2022; navigate to your shapefile<br>
+   &#x2022; navigate to your shapefile and add it<br>
    &#x2022; <em>inspect</em> your layer in the TOC<br>
    &#x2022; note that if you move your .shp file on your computer, or if you use a portable drive, you'll need to <em>"reconnect"</em> your data source everytime you open your .mxd
   <notes>
@@ -340,8 +348,6 @@
     click add - you can do many at once
     notice that you can see the data type - pt, line polygon
     look at layer in the TOC - turn on and off, reorder (order in the TOC is the order on the map)
-    right-click and select vie attributes - the is the data table underlying your layer
-    practice selecting elements from the table, selecting from the layer 
 
     if you are experiencing the “Absolute Paths” problem do the following:
       1. right-click on one of the layers and select Data>Repair Data Source
@@ -354,7 +360,43 @@
 </div>
 
 <div>
-  <em>import &amp; display a dataset</em>
+  right-click and select view attributes<br>
+  practice selecting elements from the table<br>
+  practice selecting elements from the layer 
+</div>
+
+<div>
+  fortunately, we're not done with <em>projection systems</em> yet! in ArcMap, datasets can (/sometimes must) have their own defined projection systems, while the data frame can have a <em>completely different</em> one!
+  <notes>
+    this is actually a really good thing - it means you can add layers with different systems to the map at once (by using "on the fly" projecting in ArcMap, but this does make your layers render more slowly)
+    to change the system of a layer:
+  </notes>
+</div>
+
+<div>
+  1. right-click on the Layers Item at the top of the Table of Contents and select Properties<br>
+  2. click on the Coordinate system Tab and expand the Layers Folder in the “Select a Coordinate System:” panel<br>
+  3. expand the Layers Folder and select your Projection file. click OK.<br>
+  4. click Save 
+</div>
+
+<div>
+  <em>symbolize</em> your layers
+</div>
+
+<div>
+    right-click and select properties<br>
+    basic symbology<br>
+    symbolize by category/quantity
+  <notes>
+    GET VISUALS OF 
+      (1) different types of maps e.g. choropleth and 
+      (2) different ways of visualizing the same dataset by different types 
+  </notes>
+</div>
+
+<div>
+    things to think about with symbolizing by value: <em>normalizing</em>, <em>classification method</em> (how you break up data), appropriate <em>color scheme</em>
   <notes>
     TO MAP OR NOT TO MAP
       When Maps Shouldn’t Be Maps
@@ -380,32 +422,8 @@
 </div>
 
 <div>
-  fortunately, we're not done with <em>projection systems</em> yet! in ArcMap, datasets can (and sometimes must) have their own defined projection systems, while the data frame can have a <em>completely different</em> one!
-  <notes>
-    this is actually a really good thing - it means you can add layers with different systems to the map at once (by using "on the fly" projecting in ArcMap, but this does make your layers render more slowly)
-    to change the system of a layer:
-      1. right-click on the Layers Item at the top of the Table of Contents and select Properties
-      2. click on the Coordinate system Tab and expand the Layers Folder in the “Select a Coordinate System:” panel
-      3. expand the Layers Folder and select your Projection file. click OK.
-      4. click Save 
-  </notes>
-</div>
-
-<div>
-  symbolize a dataset
-  <notes>
-    GET VISUALS OF (1) different types of maps e.g. choropleth and (2) different ways of visualizing the same dataset by different types 
-
-    right-click and select properties
-    basic symbology
-    symbolize by category/quantity
-    things to think about with symbolizing by value - normalizing, method of breaking up data, appropriate color scheme
-  </notes>
-</div>
-
-<div>
   <em>other things you can do</em> (&amp; will want to):<br>
-  &#x2022; add a <em>basemap</em> (e.g. <span style="color:#0266C8">g</span><span style="color:#F90101">o</span><span style="color:#F2B50F">o</span><span style="color:#0266C8">g</span><span style="color:#00933B">l</span><span style="color:#F90101">e</span>, stamen, bing imagery)<br>
+  &#x2022; add a <em>basemap</em> (e.g. <span style="color:#0266C8">g</span><span style="color:#F90101">o</span><span style="color:#F2B50F">o</span><span style="color:#0266C8">g</span><span style="color:#00933B">l</span><span style="color:#F90101">e</span>, <a href='http://maps.stamen.com/#terrain/12/37.7706/-122.3782' target="_blank">stamen</a>, bing imagery)<br>
   &#x2022; <em>edit</em> your data table<br>
   &#x2022; <em>edit</em> your shapes<br>
   &#x2022; perform <em>analyses</em> (e.g. calculate distance, do a clustering or kernel density analysis, etc.)<br>
@@ -471,7 +489,7 @@
 </div>
 
 <div>
-  still sad ArcGIS is so expensive? <a href='https://qgis.org/en/site/forusers/download.html' target="_blank">download QGIS</a> (for free!) and try out this <a href='http://mappingmashups.net/2012/11/30/a-very-short-introduction-to-qgis/' target="_blank">quick tutorial</a>
+  still sad ArcGIS is so <em>expensive</em>? <a href='https://qgis.org/en/site/forusers/download.html' target="_blank">download QGIS</a> (for <em>free</em>!) and try out this <a href='http://mappingmashups.net/2012/11/30/a-very-short-introduction-to-qgis/' target="_blank">quick tutorial</a>
 </div>
 
 <div>
