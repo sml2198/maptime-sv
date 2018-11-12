@@ -11,6 +11,9 @@
 
 <div>
   welcome to <em>makin' maps with TechSoc and VLP</em>! go to <a href='https://bit.ly/2DhNOWu' target="_blank">https://bit.ly/2DhNOWu</a> to follow along.
+  <notes>
+    hi! welcome! a quick note: I played real fast and loose with image attribution in this presentation (aka may or may not have snagged some things from google images) so pretty please don't distribute this widely 
+  </notes>
 </div>
 
 <div>
@@ -37,8 +40,22 @@
 </div>
 
 <div>
-  today we're making <em>geographical maps</em>. that means we're working with data with an (<em>x</em>, <em>y</em>) or (long, lat)
+  today we're making <em>geographical maps</em>. that means we're working with data with an (<em>x</em>, <em>y</em>) or (lon, lat)
 </div>
+
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be9e26f1ae6cfbdd7b601d8/1542054568646/Screen+Shot+2018-11-12+at+3.26.30+PM.png'>
+  <notes>
+    Thanks https://datavizproject.com/
+  </notes>
+</div>  
+
+<div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be9e27f758d46259d197598/1542054614268/Screen+Shot+2018-11-12+at+3.26.07+PM.png'>
+  <notes>
+    Thanks https://datavizproject.com/
+  </notes>
+</div>  
 
 <div>
   I like maps, <em>because they lie.</em><br>
@@ -75,7 +92,9 @@
 </div>
 
 <div>
-  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be8f098aa4a99b2bad8e620/1541992604249/gis_layers.png'>
+  <center>
+    <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be8f098aa4a99b2bad8e620/1541992604249/gis_layers.png'>
+  </center>
 </div>  
   
 <div>
@@ -112,11 +131,15 @@
 </div>
 
 <div>
-  <img src="https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acf7562fa792b007f9da/1541451022187/raster_1.png">
+  <center>
+    <img src="https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0acf7562fa792b007f9da/1541451022187/raster_1.png">
+  </center>
 </div>
 
 <div>
-  <img src="https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541872867052/raster-2.gif">
+  <center>
+    <img src="https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be0ad00898583c110ad296d/1541872867052/raster-2.gif">
+  </center>
 </div>
 
 <div>
@@ -237,6 +260,11 @@
 </div>
 
 <div>
+  <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be9e8b240ec9a97ddd205ea/1542056119672/usa_projections.jpg?format=2500w'>
+</div>
+
+
+<div>
   try playing with <a href ='https://www.jasondavies.com/maps/transition/' target="_blank">this</a>, <em>seriously</em>
 </div>
 
@@ -270,6 +298,29 @@
 
 <div>
   &#9856; navigate ArcMap + <em>make a document</em>
+</div>
+
+<div>
+  but first: we need to <em>activate</em> your ArcGIS (this is not standard)
+</div>
+
+<div>
+  <em>step one:</em><br>
+  &#x2022; click on <em>configure your licensing options</em> at the bottom of the pop-up<br>
+  &#x2022; on the next pop-up, change <em>License Type</em> to <em>Concurrent Use License</em><br>
+  &#x2022; add <span style="color:#000000; background-color:#ff0066;">27006@studentarc. forestry.yale.edu</span> to <em>License Manager field</em>
+</div>
+
+<div>
+  <em>step two:</em><br>
+  &#x2022; add <span style="color:#000000; background-color:#ff0066;">27006@cooke. library.yale.edu</span> to <em>Backup (optional)</em> field<br>
+  &#x2022; click on <em>Refresh</em> at the bottom of the pop-up<br>
+  &#x2022; <em>check all the boxes</em> that are not grayed out then click <em>okay</em><br>
+  &#x2022; <em>launch</em> ArcGIS Pro
+</div>
+
+<div class='blink'>
+  cool, let's <em>do</em> this 
 </div>
 
 <div>
@@ -423,6 +474,10 @@
 </div>
 
 <div>
+  we don't have time to do a deep dive into which projection to use, but <a href="https://source.opennews.org/articles/choosing-right-map-projection/" target="_blank">generally</a> you want to use a <a href="http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/state-plane-coordinate-system.htm#GUID-6233DDDC-9ABF-48AB-AE30-04DC268229C9" target="_blank">State Plane system</a>for <em>state/local</em> mapping and <a href="http://desktop.arcgis.com/en/arcmap/latest/map/projections/albers-equal-area-conic.htm" target="_blank">Albers Equal Area Conic</a> if you're mapping the <em>USA</em>
+</div>
+
+<div>
   &#x2022; right-click on your layer and select <em>Properties</em><br>
   &#x2022; under <em>General</em>, give it a name like <em>NYC Parcels</em><br>
   &#x2022; under <em>Symbology</em>, give your layer a new <span style="color:#ff0066">color</span>
@@ -496,6 +551,18 @@
 </div>
 
 <div>
+  <img src="https://lisacharlotterost.github.io/pic/141214_categories.jpg">
+  <notes>
+    Lisa Charlotte Rost, you're my fucking hero. 
+    https://lisacharlotterost.github.io/2014/12/14/Styling-Choropleth-Maps-2/
+  </notes>
+</div>
+
+<div>
+  okay, let's see our map so far... 
+</div>
+
+<div>
   <img src="https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be76ced032be4540eb6c70a/1541893367121/data_view_final.png">
 </div>
 
@@ -509,29 +576,20 @@
 </div>
 
 <div>
-    things to think about with symbolizing by value: <em>normalization</em>, <em>units</em> of area and other data, <em>classification</em> method, and <em>color scheme</em>
-  <notes>
-    TO MAP OR NOT TO MAP
-      When Maps Shouldn’t Be Maps
-        http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/
-    LINKS ON CLASSIFICATIONS SYSTEMS
-      The Basics of Data Classification
-        https://www.axismaps.com/guide/data/data-classification/
-    CHOROPLETHS
-      When to use choropleth maps
-        https://blog.datawrapper.de/choroplethmaps/
-      Bivariate Choropleth Maps
-        http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/
-      Take Care of your Choropleth Maps
-        https://www.vis4.net/blog/2011/12/choropleth-maps/
-    LINKS ON COLORS
-      Color Brewer
-        http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
-      Chroma.js Color Scale Helper
-        http://gka.github.io/palettes/#diverging|c0=darkred,deeppink,lightyellow|c1=lightyellow,lightgreen,teal|steps=13|bez0=1|bez1=1|coL0=1|coL1=1
-      Your Friendly Guide to Colors in Data Visualisation
-        https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/
-  </notes>
+  <em>first-order questions</em> to ask youself: should this <a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/" target="_blank">even be a map</a>? should this map be a <a href="https://blog.datawrapper.de/choroplethmaps/" target="_blank">choropleth</a>?
+</div>
+
+<div>
+  NB: a <em>choropleth map</em> displays geographical areas or regions that are colored or patterned in relation to a data variable. learn more <a href="https://www.vis4.net/blog/2011/12/choropleth-maps/" target="_blank">here</a> + 
+  <a href="http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/" target="_blank">here</a>.
+</div>
+
+<div>
+    <em>second-order considerations</em> when symbolizing by value: <em>normalization</em>, <em>units</em> of area and other data, <a href="https://www.axismaps.com/guide/data/data-classification/" target="_target">classification</a> method, and <em>color scheme</em>
+</div>
+
+<div>
+  <em>psst</em> . . . <a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3" target="_target">here</a> and <a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3" target="_target">here</a> and <a href="http://gka.github.io/palettes/#diverging|c0=darkred,deeppink,lightyellow|c1=lightyellow,lightgreen,teal|steps=13|bez0=1|bez1=1|coL0=1|coL1=1" target="_target">here</a> and <a href="https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/" target="_target">here</a> are some helpful links about finding color schemes
 </div>
 
 <div>
@@ -563,10 +621,10 @@
 </div>
 
 <div>
-  switch to <em>Layout View</em> (from the View tab)<br>
-  click on the rulers to create <em>guide rules</em> to snap things to<br>
-  go to <em>Insert</em> &#x2192; <em>Legend</em> &#x2192; click through all the <em>Nexts</em> and hit <em>Finish</em><br>
-  go to <em>Insert</em> and consider what else to add: a <em>title</em>? a <em>scale bar</em>? you can also edit fonts and styles
+  &#x2022; switch to <em>Layout View</em> (from the View tab)<br>
+  &#x2022; click on the rulers to create <em>guide rules</em> to snap things to<br>
+  &#x2022; go to <em>Insert</em> &#x2192; <em>Legend</em> &#x2192; click through all the <em>Nexts</em> and hit <em>Finish</em><br>
+  &#x2022; go to <em>Insert</em> and consider what else to add: a <em>title</em>? a <em>scale bar</em>? you can also edit fonts and styles
 </div>
 
 <div>
@@ -588,7 +646,7 @@
 <div>
   <em>other things you can do</em> in GIS (&amp; will want to):<br>
   &#x2022; add a <em>basemap</em> (e.g. <span style="color:#0266C8">g</span><span style="color:#F90101">o</span><span style="color:#F2B50F">o</span><span style="color:#0266C8">g</span><span style="color:#00933B">l</span><span style="color:#F90101">e</span>, <a href='http://maps.stamen.com/#terrain/12/37.7706/-122.3782' target="_blank">stamen</a>, bing imagery)<br>
-  &#x2022; <a href ="https://www.youtube.com/watch?v=F9oGFcmsR3k" target ="_blank">import points</a> layer from <em>(x,y)</em> data, no .shp needed<br>
+  &#x2022; <a href ="https://www.youtube.com/watch?v=F9oGFcmsR3k" target ="_blank">create a points</a> layer from any <em>(x,y)</em> data, no .shp needed<br>
   &#x2022; perform <em>analyses</em> (e.g. calculate distance, find clusters in data, etc.)<br>
 </div>
 
@@ -612,7 +670,11 @@
 </div>
 
 <div>
-  where to find more <em>geo data</em>? some examples:
+  where do I find <em>open geo data</em> to map?
+</div>
+
+<div>
+  some open <em>geo data</em> sources:
     <a href="https://www.data.gov/" target="_blank">data.gov</a> + 
     <a href="https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml" target="_blank">Census Factfinder</a> + 
     <a href="https://opendata.cityofnewyork.us/" target="_blank">Misc. Local Open Data</a> + 
@@ -649,7 +711,7 @@
 </div>
 
 <div>
-  some mappy <em>inspiration</em>: <a href="https://www.mapbox.com/gallery/" target="_blank">here</a> + <a href="http://www.radicalcartography.net/" target="_blank">here</a> + <a href="http://rebeccasolnit.net/atlases/">here</a> + <a href="http://googlemapsmania.blogspot.com/" target="_blank">here</a>
+  some mappy <em>inspiration</em>: <a href="https://www.mapbox.com/gallery/" target="_blank">here</a> + <a href="http://www.radicalcartography.net/" target="_blank">here</a> + <a href="http://rebeccasolnit.net/atlases/">here</a> + <a href="http://googlemapsmania.blogspot.com/" target="_blank">here</a> + <a href="https://informationisbeautiful.net/" target="_blank">here</a> + <a href="https://flowingdata.com/" target="_blank">here</a> + <a href="https://www.informationisbeautifulawards.com/" target="_blank">here</a>
 </div> 
 
 <div>
