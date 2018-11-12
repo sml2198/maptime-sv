@@ -44,6 +44,15 @@
 </div>
 
 <div>
+  <small class='nobreak'>&#x2191; &#x2193; longitude</small><br>
+  <small class='nobreak'>&#x2190; &#x2192; latitude</small>
+</div>
+
+<div>
+  data viz <em>v.</em> map?
+</div>
+
+<div>
   <img src='https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5be9e26f1ae6cfbdd7b601d8/1542054568646/Screen+Shot+2018-11-12+at+3.26.30+PM.png'>
   <notes>
     Thanks https://datavizproject.com/
@@ -306,6 +315,7 @@
 
 <div>
   <em>step one:</em><br>
+  &#x2022; go to programs &#x2794; ArcGIS &#x2794; <em>ArcMap</em> (v 10.6.1)<br>
   &#x2022; click on <em>configure your licensing options</em> at the bottom of the pop-up<br>
   &#x2022; on the next pop-up, change <em>License Type</em> to <em>Concurrent Use License</em><br>
   &#x2022; add <span style="color:#000000; background-color:#ff0066;">27006@studentarc. forestry.yale.edu</span> to <em>License Manager field</em>
@@ -325,17 +335,20 @@
 
 <div>
   &#x2022; create a <em>folder</em> and give it a name with no spaces<br>
-  &#x2022; go to programs &#x2794; ArcGIS &#x2794; <em>ArcMap</em> (v 10.6.1)<br>
+  &#x2022; go back to programs &#x2794; ArcGIS &#x2794; <em>ArcMap</em><br>
   &#x2022; select <em>"blank map"</em><br>
   &#x2022; save to your folder (a doc in ArcMap is called an <em>.mxd</em> file)
   <notes>
-    make a folder on the desktop (or wherever) and give it a name (make sure there are no spaces in your folder name)
     we will be using ArcMap today, which is the 2D mapping software that is part of the ESRI ArcGIS suite (ESRI also makes 3d rendering software, called ArcScene and other fun things) 
     first, go to programs -> ArcGIS -> ArcMap (should be version 10.6.1 but not a huge deal if not)
     select "blank map" (you may need to navigate through "New Maps" -> "My Templates" -> "Blank Map" in the left-hand table of contents)
-    save your file - ArcMap files are saved as an .mxd (Map Exchange Document) which are very portable
-    you can double-click on an .mxd file once it is saved to open it and ArcMap will launch 
   </notes>
+</div>
+
+<div>
+  &#x2022; <a href="http://wiki.gis.com/wiki/index.php/File_Format_MXD" target="_blank">.mxd</a> = <em>Map Exchange Document</em>, a very portable file type<br>
+  &#x2022; you can <em>double-click</em> on an .mxd file once it is saved to open it and ArcMap will launch<br>
+  &#x2022; ArcMap is just one of many <em>ESRI ArcGIS</em> programs (e.g. ArcScene)
 </div>
 
 <div>
@@ -393,8 +406,7 @@
   &#x2022; download <em>MapPLUTO - Manhattan (Shapefile)</em>. save this file with your map, but first, let's talk about <em>file paths</em><br>
   &#x2022; make sure to <em>unzip</em> your file (right click &#x2192; "Extract All")
   <notes>
-    *** note that we will come back to where to find data you can use for your own map-making needs
-    how to name files
+    note that we will come back to where to find data you can use for your own map-making needs
   </notes>
 </div>
 
@@ -423,6 +435,16 @@
 
 <div>
   <em>.shp.xml</em> is “geospatial metadata in XML format”. . . yeah, <em>don't worry</em> about that . . .
+</div>
+
+<div>
+  wait, what's a <em>shape</em> and what's a <em>data table</em> and what's an <em>attribute</em>?
+</div>
+
+<div>
+  <center>
+    <img src='https://www.baruch.cuny.edu/confluence/download/attachments/32048268/shapefile_example.png?version=1&modificationDate=1464709161340&api=v2'>
+  </center>
 </div>
 
 <div>
@@ -475,6 +497,10 @@
 
 <div>
   we don't have time to do a deep dive into which projection to use, but <a href="https://source.opennews.org/articles/choosing-right-map-projection/" target="_blank">generally</a> you want to use a <a href="http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/state-plane-coordinate-system.htm#GUID-6233DDDC-9ABF-48AB-AE30-04DC268229C9" target="_blank">State Plane system</a>for <em>state/local</em> mapping and <a href="http://desktop.arcgis.com/en/arcmap/latest/map/projections/albers-equal-area-conic.htm" target="_blank">Albers Equal Area Conic</a> if you're mapping the <em>USA</em>
+</div>
+
+<div>
+  if you're a stickler, and need to know the difference between a <em>coordinate</em> system and a <em>projection</em> system, read more <a href="http://resources.esri.com/help/9.3/arcgisengine/dotnet/89b720a5-7339-44b0-8b58-0f5bf2843393.htm#ProjectedCoordSys" target="_blank">here</a>
 </div>
 
 <div>
@@ -551,7 +577,7 @@
 </div>
 
 <div>
-  <img src="https://lisacharlotterost.github.io/pic/141214_categories.jpg">
+  <img src="https://static1.squarespace.com/static/53b87b7ee4b078c586ebe41b/t/5bea005f2b6a28ddf22390c6/1542062293670/141214_categories.jpg?format=2500w">
   <notes>
     Lisa Charlotte Rost, you're my fucking hero. 
     https://lisacharlotterost.github.io/2014/12/14/Styling-Choropleth-Maps-2/
@@ -559,7 +585,7 @@
 </div>
 
 <div>
-  okay, let's see our map so far... 
+  okay, let's see our map so far . . . 
 </div>
 
 <div>
@@ -722,7 +748,7 @@
 </div>
 
 <div>
-  made with <em>BIG</em> presentation software for busy busy hackers. you can comment and edit on github: <a href="https://github.com/tmcw/big" target="_blank">https://github.com/tmcw/big</a>
+  made with <em>BIG</em> presentation software for busy messy hackers. you can comment and edit on github: <a href="https://github.com/tmcw/big" target="_blank">https://github.com/tmcw/big</a>
 </div>
 
 </body>
